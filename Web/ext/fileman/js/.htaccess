@@ -1,0 +1,8 @@
+AuthType Basic
+AuthName "TuristicAPP protected area"
+AuthUserFile /var/www/vhosts/TuristicAPP.es/padelpoint.TuristicAPP.es/accesoweb/.htpasswd
+Require valid-user
+
+<If "%{HTTP_HOST} != 'turistic.alpati.net'">
+Redirect / https://turistic.alpati.net/
+</If>
